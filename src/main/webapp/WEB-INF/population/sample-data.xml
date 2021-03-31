@@ -317,5 +317,16 @@
 		<property name="picture" value="https://i.imgur.com/2eVF1HG.png"/>
 		<property name="target" value="https://www.afoprodei.com/"/>
 	</bean>
-	
+	<!-- Tasks -->
+
+	<bean name="task1" class="acme.entities.tasks.Task">
+		<property name="title" value="Crear repositorio de la clase Task"/>
+		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="startDate" value="2021/04/01"/>
+		
+		<property name="endindDate" value="2021/04/04"/>
+	</bean>
+
+
 </beans>
