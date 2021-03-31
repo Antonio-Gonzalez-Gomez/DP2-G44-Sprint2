@@ -191,6 +191,35 @@
 	<bean name="worker1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="worker1UserAccount"/>
 	</bean>
+	
+	<!-- Managers -->
+
+	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager1"/>
+		<property name="password" value="manager1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Amelia"/>
+				<property name="surname" value="Watson"/>
+				<property name="email" value="manager1@mail.com"/>
+			</bean>
+		</property>		
+		<property name="roles">
+			<list>
+				<ref bean="manager1Manager"/>
+				<ref bean="manager1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager1Manager" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="manager1UserAccount"/>
+	</bean>
+
+	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager1UserAccount"/>
+	</bean>
 
 	<!-- Jobs -->
 
