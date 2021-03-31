@@ -3,6 +3,8 @@ package acme.entities.tasks;
 import java.time.LocalDateTime;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -10,6 +12,7 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import acme.entities.roles.Manager;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -42,6 +45,14 @@ public class Task extends DomainEntity {
     
     @NotBlank
     protected Double workload;
+    
+ // Relationships ----------------------------------------------------------
+
+
+ 	@NotNull
+ 	@Valid
+ 	@ManyToOne(optional = false)
+ 	protected Manager manager;
     
     
     

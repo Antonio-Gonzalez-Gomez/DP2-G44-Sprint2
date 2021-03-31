@@ -3,11 +3,11 @@ package acme.features.manager.task;
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.config.Task;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.roles.Manager;
+import acme.entities.tasks.Task;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
@@ -32,8 +32,7 @@ public class ManagerTaskController extends AbstractController<Manager, Task>  {
 		@Autowired
 		protected ManagerTaskListService		listService;
 
-		// Constructors -----------------------------------------------------------
-
+	// Constructors -----------------------------------------------------------
 
 		@PostConstruct
 		protected void initialise() {
