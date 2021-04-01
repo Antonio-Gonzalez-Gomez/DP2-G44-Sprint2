@@ -23,7 +23,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select avg(t.executionPeriod) from Task t")
 	Double averageTaskExecutionPeriod();
 
-	@Query(value = "select stdev(t.executionPeriod) from Task t", nativeQuery = true)
+	@Query(value = "select STD(t.execution_period) from Task t", nativeQuery = true)
 	Double deviationTaskExecutionPeriod();
 
 	@Query("select min(t.executionPeriod) from Task t")
@@ -35,7 +35,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select avg(t.workload) from Task t")
 	Double averageTaskWorkload();
 
-	@Query(value = "select stdev(t.workload) from Task t", nativeQuery = true)
+	@Query(value = "select STD(t.workload) from Task t", nativeQuery = true)
 	Double deviationTaskWorkload();
 	
 	@Query("select min(t.workload) from Task t")

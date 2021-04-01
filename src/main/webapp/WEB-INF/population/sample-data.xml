@@ -329,6 +329,8 @@
 		<property name="workload" value="6"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="true"/>
+		<property name="executionPeriod" value="3000"/>
+		<property name="manager" ref="manager1Manager"/>
 	</bean>
 
 	<bean name="task3" class="acme.entities.tasks.Task">
@@ -340,7 +342,8 @@
 		<property name="workload" value="8"/>
 		<property name="finished" value="false"/>
 		<property name="privacy" value="true"/>
-		
+		<property name="executionPeriod" value="3000"/>
+		<property name="manager" ref="manager1Manager"/>
 	</bean>
 	
 	<bean name="task2" class="acme.entities.tasks.Task">
@@ -352,5 +355,7 @@
 		<property name="workload" value="7"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="3000"/>
+		<property name="manager" ref="manager1Manager"/>
 	</bean>
 </beans>

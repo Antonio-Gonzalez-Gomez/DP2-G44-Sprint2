@@ -1,6 +1,7 @@
 package acme.features.manager.task;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,11 +40,11 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		entity.setExecutionPeriod();
 		
 		if (!errors.hasErrors("past_task")) {
-			errors.state(request, entity.getStartDate().isBefore(LocalDateTime.now()), "past_task", "manager.task.form.error.past_task");
+			errors.state(request, entity.getStartDate().before(Date.from(Instant.now())), "past_task", "manager.task.form.error.past_task");
 		}
 		
 		if (!errors.hasErrors("incorrect_finish")) {
-			errors.state(request, entity.getEndingDate().isBefore(entity.getStartDate()), "incorrect_finish", "manager.task.form.error.incorrect_finish");
+			errors.state(request, entity.getEndingDate().before(entity.getStartDate()), "incorrect_finish", "manager.task.form.error.incorrect_finish");
 		}
 		
 		if (!errors.hasErrors("work_overload")) {

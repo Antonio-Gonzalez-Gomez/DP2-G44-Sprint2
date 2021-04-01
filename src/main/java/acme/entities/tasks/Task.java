@@ -4,9 +4,9 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.validation.Valid;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -45,13 +45,13 @@ public class Task extends DomainEntity {
     @Temporal(TemporalType.TIMESTAMP)
     protected Date endingDate;
     
-    
+    @NotNull
     protected Double workload;
     
-    @NotBlank
+    @NotNull
     protected Boolean privacy;
     
-    @NotBlank
+    @NotNull
     protected Boolean finished;
     
     @NotNull
@@ -61,11 +61,11 @@ public class Task extends DomainEntity {
 
 
  	public void setExecutionPeriod() {
-		this.executionPeriod = (this.endingDate.getYear()*525600-525600 + this.endingDate.getMonthValue()*43200-43200 + 
-			this.endingDate.getDayOfMonth()*1440-1440 + this.endingDate.getHour()*60-60 + this.endingDate.getMinute()-1 + 
-			this.endingDate.getSecond()/60-0.016) - (this.startDate.getYear()*525600-525600 + 
-			this.startDate.getMonthValue()*43200-43200 + this.startDate.getDayOfMonth()*1440-1440 + 
-			this.startDate.getHour()*60-60 + this.startDate.getMinute()-1 + this.startDate.getSecond()/60-0.1);
+		this.executionPeriod = (this.endingDate.getYear()*525600-525600 + this.endingDate.getMonth()*43200-43200 + 
+			this.endingDate.getDay()*1440-1440 + this.endingDate.getHours()*60-60 + this.endingDate.getMinutes()-1 + 
+			this.endingDate.getSeconds()/60-0.016) - (this.startDate.getYear()*525600-525600 + 
+			this.startDate.getMonth()*43200-43200 + this.startDate.getDay()*1440-1440 + 
+			this.startDate.getHours()*60-60 + this.startDate.getMinutes()-1 + this.startDate.getSeconds()/60-0.1);
  	}
     
  // Relationships ----------------------------------------------------------
