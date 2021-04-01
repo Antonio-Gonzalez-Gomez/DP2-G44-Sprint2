@@ -1,14 +1,16 @@
 package acme.entities.tasks;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import org.springframework.format.annotation.DateTimeFormat;
+import org.hibernate.validator.constraints.URL;
 
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
@@ -29,20 +31,24 @@ public class Task extends DomainEntity {
     @Size(max = 500, message = "Max 500 characters")
     protected String description;
     
-    
+    @URL
     protected String link;
     
     @NotNull
-    @DateTimeFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    protected LocalDateTime startDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    protected Date startDate;
     
     @NotNull
-    @DateTimeFormat(pattern= "yyyy-MM-dd'T'HH:mm:ss.SSSXXX")
-    protected LocalDateTime endingDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    protected Date endingDate;
     
-    @NotBlank
+    
     protected Double workload;
     
     
+    protected Boolean finished;
+    
+    
+    protected Boolean privacy;
     
 }

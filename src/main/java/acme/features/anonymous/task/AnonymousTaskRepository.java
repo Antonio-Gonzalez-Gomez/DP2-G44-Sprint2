@@ -13,6 +13,8 @@ public interface AnonymousTaskRepository extends AbstractRepository {
 
 	@Query("select t from Task t")
 	Collection<Task> findMany();
+	
+	
 
 }
 
