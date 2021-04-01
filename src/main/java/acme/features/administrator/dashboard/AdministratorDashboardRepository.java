@@ -20,28 +20,28 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
 
-	@Query("avg(select t.execution_period from Task t)")
+	@Query("select avg(t.executionPeriod) from Task t")
 	Double averageTaskExecutionPeriod();
 
-	@Query("stdev(select t.execution_period from Task t)")
+	@Query(value = "select stdev(t.executionPeriod) from Task t", nativeQuery = true)
 	Double deviationTaskExecutionPeriod();
 
-	@Query("min(select t.execution_period from Task t)")
+	@Query("select min(t.executionPeriod) from Task t")
 	Double minimumTaskExecutionPeriod();
 
-	@Query("max(select t.execution_period from Task t)")
+	@Query("select max(t.executionPeriod) from Task t")
 	Double maximumTaskExecutionPeriod();
 
-	@Query("avg(select t.workload from Task t)")
+	@Query("select avg(t.workload) from Task t")
 	Double averageTaskWorkload();
 
-	@Query("stdev(select t.workload from Task t)")
+	@Query(value = "select stdev(t.workload) from Task t", nativeQuery = true)
 	Double deviationTaskWorkload();
 	
-	@Query("min(select t.workload from Task t)")
+	@Query("select min(t.workload) from Task t")
 	Double minimumTaskWorkload();
 
-	@Query("max(select t.workload from Task t)")
+	@Query("select max(t.workload) from Task t")
 	Double maximumTaskWorkload();
 
 	@Query("select 1.0 * count(a) / (select count(b) from Task b) from Task a where a.privacy = false")
