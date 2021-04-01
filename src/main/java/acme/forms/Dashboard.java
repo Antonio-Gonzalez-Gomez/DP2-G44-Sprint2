@@ -27,12 +27,18 @@ public class Dashboard implements Serializable {
 
 	// Attributes -------------------------------------------------------------
 
-	Double						averageNumberOfJobsPerEmployer;
-	Double						averageNumberOfApplicationsPerWorker;
-	Double						avegageNumberOfApplicationsPerEmployer;
-	Double						ratioOfPendingApplications;
-	Double						ratioOfAcceptedApplications;
-	Double						ratioOfRejectedApplications;
+	Double						averageTaskExecutionPeriod;
+	Double						deviationTaskExecutionPeriod;
+	Double						minimumTaskExecutionPeriod;
+	Double						maximumTaskExecutionPeriod;
+	Double						averageTaskWorkload;
+	Double						deviationTaskWorkload;
+	Double						minimumTaskWorkload;
+	Double						maximumTaskWorkload;
+	Double						ratioOfPublicTasks;
+	Double						ratioOfPrivateTasks;
+	Double						ratioOfFinishedTasks;
+	Double						ratioOfUnfinishedTasks;
 
 	// Derived attributes -----------------------------------------------------
 

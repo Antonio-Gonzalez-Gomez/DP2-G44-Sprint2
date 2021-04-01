@@ -20,22 +20,40 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratorDashboardRepository extends AbstractRepository {
 
-	@Query("select avg(select count(j) from Job j where j.employer.id = e.id) from Employer e")
-	Double averageNumberOfJobsPerEmployer();
+	@Query("avg(select t.execution_period from Task t)")
+	Double averageTaskExecutionPeriod();
 
-	@Query("select avg(select count(a) from Application a where a.worker.id = w.id) from Worker w")
-	Double averageNumberOfApplicationsPerWorker();
+	@Query("stdev(select t.execution_period from Task t)")
+	Double deviationTaskExecutionPeriod();
 
-	@Query("select avg(select count(a) from Application a where exists(select j from Job j where j.employer.id = e.id and a.job.id = j.id)) from Employer e")
-	Double averageNumberOfApplicationsPerEmployer();
+	@Query("min(select t.execution_period from Task t)")
+	Double minimumTaskExecutionPeriod();
 
-	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = acme.entities.jobs.ApplicationStatus.PENDING")
-	Double ratioOfPendingApplications();
+	@Query("max(select t.execution_period from Task t)")
+	Double maximumTaskExecutionPeriod();
 
-	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = acme.entities.jobs.ApplicationStatus.ACCEPTED")
-	Double ratioOfAcceptedApplications();
+	@Query("avg(select t.workload from Task t)")
+	Double averageTaskWorkload();
 
-	@Query("select 1.0 * count(a) / (select count(b) from Application b) from Application a where a.status = acme.entities.jobs.ApplicationStatus.REJECTED")
-	Double ratioOfRejectedApplications();
+	@Query("stdev(select t.workload from Task t)")
+	Double deviationTaskWorkload();
+	
+	@Query("min(select t.workload from Task t)")
+	Double minimumTaskWorkload();
+
+	@Query("max(select t.workload from Task t)")
+	Double maximumTaskWorkload();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Task b) from Task a where a.privacy = false")
+	Double ratioOfPublicTasks();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Task b) from Task a where a.privacy = true")
+	Double ratioOfPrivateTasks();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Task b) from Task a where a.finished = true")
+	Double ratioOfFinishedTasks();
+
+	@Query("select 1.0 * count(a) / (select count(b) from Task b) from Task a where a.finished = false")
+	Double ratioOfUnfinishedTasks();
 
 }

@@ -46,6 +46,26 @@ public class Task extends DomainEntity {
     @NotBlank
     protected Double workload;
     
+    @NotBlank
+    protected Boolean privacy;
+    
+    @NotBlank
+    protected Boolean finished;
+    
+    @NotNull
+    protected Double executionPeriod;
+    
+ // Derived attributes -----------------------------------------------------
+
+
+ 	public void setExecutionPeriod() {
+		this.executionPeriod = (this.endingDate.getYear()*525600-525600 + this.endingDate.getMonthValue()*43200-43200 + 
+			this.endingDate.getDayOfMonth()*1440-1440 + this.endingDate.getHour()*60-60 + this.endingDate.getMinute()-1 + 
+			this.endingDate.getSecond()/60-0.016) - (this.startDate.getYear()*525600-525600 + 
+			this.startDate.getMonthValue()*43200-43200 + this.startDate.getDayOfMonth()*1440-1440 + 
+			this.startDate.getHour()*60-60 + this.startDate.getMinute()-1 + this.startDate.getSecond()/60-0.1);
+ 	}
+    
  // Relationships ----------------------------------------------------------
 
 

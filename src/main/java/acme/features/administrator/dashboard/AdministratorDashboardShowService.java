@@ -46,9 +46,12 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert model != null;
 
 		request.unbind(entity, model, //
-			"averageNumberOfJobsPerEmployer", "averageNumberOfApplicationsPerWorker", // 
-			"avegageNumberOfApplicationsPerEmployer", "ratioOfPendingApplications", //
-			"ratioOfRejectedApplications", "ratioOfAcceptedApplications");
+			"averageTaskExecutionPeriod", "deviationTaskExecutionPeriod", // 
+			"minimumTaskExecutionPeriod", "maximumTaskExecutionPeriod", //
+			"averageTaskWorkload", "deviationTaskWorkload", //
+			"minimumTaskWorkload", "maximumTaskWorkload", //
+			"ratioOfPublicTasks", "ratioOfPrivateTasks", //
+			"ratioOfFinishedTasks", "ratioOfUnfinishedTasks");
 	}
 
 	@Override
@@ -56,27 +59,45 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		assert request != null;
 
 		Dashboard result;
-		Double averageNumberOfApplicationsPerEmployer;
-		Double averageNumberOfApplicationsPerWorker;
-		Double averageNumberOfJobsPerEmployer;
-		Double ratioOfPendingApplications;
-		Double ratioOfAcceptedApplications;
-		Double ratioOfRejectedApplications;
+		final Double averageTaskExecutionPeriod;
+		final Double deviationTaskExecutionPeriod;
+		final Double minimumTaskExecutionPeriod;
+		final Double maximumTaskExecutionPeriod;
+		final Double averageTaskWorkload;
+		final Double deviationTaskWorkload;
+		final Double minimumTaskWorkload;
+		final Double maximumTaskWorkload;
+		final Double ratioOfPublicTasks;
+		final Double ratioOfPrivateTasks;
+		final Double ratioOfFinishedTasks;
+		final Double ratioOfUnfinishedTasks;
 
-		averageNumberOfApplicationsPerEmployer = this.repository.averageNumberOfApplicationsPerEmployer();
-		averageNumberOfApplicationsPerWorker = this.repository.averageNumberOfApplicationsPerWorker();
-		averageNumberOfJobsPerEmployer = this.repository.averageNumberOfJobsPerEmployer();
-		ratioOfPendingApplications = this.repository.ratioOfPendingApplications();
-		ratioOfAcceptedApplications = this.repository.ratioOfAcceptedApplications();
-		ratioOfRejectedApplications = this.repository.ratioOfRejectedApplications();
+		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
+		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
+		minimumTaskExecutionPeriod = this.repository.minimumTaskExecutionPeriod();
+		maximumTaskExecutionPeriod = this.repository.maximumTaskExecutionPeriod();
+		averageTaskWorkload = this.repository.averageTaskWorkload();
+		deviationTaskWorkload = this.repository.deviationTaskWorkload();
+		minimumTaskWorkload = this.repository.minimumTaskWorkload();
+		maximumTaskWorkload = this.repository.maximumTaskWorkload();
+		ratioOfPublicTasks = this.repository.ratioOfPublicTasks();
+		ratioOfPrivateTasks = this.repository.ratioOfPrivateTasks();
+		ratioOfFinishedTasks = this.repository.ratioOfFinishedTasks();
+		ratioOfUnfinishedTasks = this.repository.ratioOfUnfinishedTasks();
 
 		result = new Dashboard();
-		result.setAvegageNumberOfApplicationsPerEmployer(averageNumberOfApplicationsPerEmployer);
-		result.setAverageNumberOfApplicationsPerWorker(averageNumberOfApplicationsPerWorker);
-		result.setAverageNumberOfJobsPerEmployer(averageNumberOfJobsPerEmployer);
-		result.setRatioOfPendingApplications(ratioOfPendingApplications);
-		result.setRatioOfAcceptedApplications(ratioOfAcceptedApplications);
-		result.setRatioOfRejectedApplications(ratioOfRejectedApplications);
+		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
+		result.setDeviationTaskExecutionPeriod(deviationTaskExecutionPeriod);
+		result.setMinimumTaskExecutionPeriod(minimumTaskExecutionPeriod);
+		result.setMaximumTaskExecutionPeriod(maximumTaskExecutionPeriod);
+		result.setAverageTaskWorkload(averageTaskWorkload);
+		result.setDeviationTaskWorkload(deviationTaskWorkload);
+		result.setMinimumTaskWorkload(minimumTaskWorkload);
+		result.setMaximumTaskWorkload(maximumTaskWorkload);
+		result.setRatioOfPublicTasks(ratioOfPublicTasks);
+		result.setRatioOfPrivateTasks(ratioOfPrivateTasks);
+		result.setRatioOfFinishedTasks(ratioOfFinishedTasks);
+		result.setRatioOfUnfinishedTasks(ratioOfUnfinishedTasks);
 
 		return result;
 	}

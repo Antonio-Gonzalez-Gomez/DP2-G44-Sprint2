@@ -28,7 +28,7 @@
 			<acme:message code="administrator.dashboard.form.label.average-task-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${averageTaskExecutionPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -36,7 +36,7 @@
 			<acme:message code="administrator.dashboard.form.label.deviation-task-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfApplicationsPerWorker}"/>
+			<acme:print value="${deviationTaskExecutionPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -44,7 +44,7 @@
 			<acme:message code="administrator.dashboard.form.label.minimum-task-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${avegageNumberOfApplicationsPerEmployer}"/>
+			<acme:print value="${minimumTaskExecutionPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -52,7 +52,7 @@
 			<acme:message code="administrator.dashboard.form.label.maximum-task-execution-period"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${maximumTaskExecutionPeriod}"/>
 		</td>
 	</tr>
 	<tr>
@@ -60,7 +60,7 @@
 			<acme:message code="administrator.dashboard.form.label.average-task-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${averageTaskWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -68,7 +68,7 @@
 			<acme:message code="administrator.dashboard.form.label.deviation-task-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${deviationTaskWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -76,7 +76,7 @@
 			<acme:message code="administrator.dashboard.form.label.minimum-task-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${minimumTaskWorkload}"/>
 		</td>
 	</tr>
 	<tr>
@@ -84,7 +84,7 @@
 			<acme:message code="administrator.dashboard.form.label.maximum-task-workloads"/>
 		</th>
 		<td>
-			<acme:print value="${averageNumberOfJobsPerEmployer}"/>
+			<acme:print value="${maximumTaskWorkload}"/>
 		</td>
 	</tr>
 </table>
@@ -106,8 +106,8 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${ratioOfPendingApplications}"/>, 
-						<jstl:out value="${ratioOfAcceptedApplications}"/>
+						<jstl:out value="${ratioOfPublicTasks}"/>, 
+						<jstl:out value="${ratioOfPrivateTasks}"/>
 					]
 				}
 			]
@@ -157,8 +157,8 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${ratioOfPendingApplications}"/>, 
-						<jstl:out value="${ratioOfAcceptedApplications}"/>,
+						<jstl:out value="${ratioOfFinishedTasks}"/>, 
+						<jstl:out value="${ratioOfUnfinishedTasks}"/>,
 					]
 				}
 			]
