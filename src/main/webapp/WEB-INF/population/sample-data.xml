@@ -220,6 +220,33 @@
 	<bean name="manager1Authenticated" class="acme.framework.entities.Authenticated">
 		<property name="userAccount" ref="manager1UserAccount"/>
 	</bean>
+	
+	<bean name="manager2UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="manager2"/>
+		<property name="password" value="manager2"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Kiryu"/>
+				<property name="surname" value="Coco"/>
+				<property name="email" value="manager2@mail.com"/>
+			</bean>
+		</property>		
+		<property name="roles">
+			<list>
+				<ref bean="manager2Manager"/>
+				<ref bean="manager2Authenticated"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean name="manager2Manager" class="acme.entities.roles.Manager">
+		<property name="userAccount" ref="manager2UserAccount"/>
+	</bean>
+
+	<bean name="manager2Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="manager2UserAccount"/>
+	</bean>
 
 	<!-- Jobs -->
 
@@ -356,6 +383,6 @@
 		<property name="finished" value="true"/>
 		<property name="privacy" value="false"/>
 		<property name="executionPeriod" value="3000"/>
-		<property name="manager" ref="manager1Manager"/>
+		<property name="manager" ref="manager2Manager"/>
 	</bean>
 </beans>

@@ -61,11 +61,11 @@ public class Task extends DomainEntity {
 
 
  	public void setExecutionPeriod() {
-		this.executionPeriod = (this.endingDate.getYear()*525600-525600 + this.endingDate.getMonth()*43200-43200 + 
-			this.endingDate.getDay()*1440-1440 + this.endingDate.getHours()*60-60 + this.endingDate.getMinutes()-1 + 
-			this.endingDate.getSeconds()/60-0.016) - (this.startDate.getYear()*525600-525600 + 
-			this.startDate.getMonth()*43200-43200 + this.startDate.getDay()*1440-1440 + 
-			this.startDate.getHours()*60-60 + this.startDate.getMinutes()-1 + this.startDate.getSeconds()/60-0.1);
+		this.executionPeriod = (double) ((this.endingDate.getYear()*525600-525600 + this.endingDate.getMonth()*43200 + 
+			this.endingDate.getDate()*1440-1440 + this.endingDate.getHours()*60 + this.endingDate.getMinutes() + 
+			this.endingDate.getSeconds()/60) - (this.startDate.getYear()*525600-525600 + 
+			this.startDate.getMonth()*43200 + this.startDate.getDate()*1440-1440 + 
+			this.startDate.getHours()*60 + this.startDate.getMinutes() + this.startDate.getSeconds()/60));
  	}
     
  // Relationships ----------------------------------------------------------

@@ -60,6 +60,12 @@ master.menu.employer.all-jobs = List all jobs
 master.menu.employer.my-jobs = List my jobs
 master.menu.employer.my-applications = List my applications
 
+# master.menu.manager #########################################################
+
+master.menu.manager = Manager
+master.menu.manager.manager-tasks = My tasks
+master.menu.manager.create-task = New task
+
 # master.menu.worker ##########################################################
 
 master.menu.worker = Worker
