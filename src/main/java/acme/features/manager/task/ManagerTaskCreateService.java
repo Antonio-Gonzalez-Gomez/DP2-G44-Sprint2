@@ -74,7 +74,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		request.unbind(entity, model, "title", "description", "link", "startDate");
 		request.unbind(entity, model, "endingDate", "workload", "finished", "privacy", "executionPeriod");
-		model.setAttribute("readonly", false);
 	}
 		
 	@Override
