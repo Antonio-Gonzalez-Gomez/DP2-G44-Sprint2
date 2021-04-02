@@ -70,7 +70,6 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if(entity.getExecutionPeriod()==null && entity.getStartDate()!=null) entity.setExecutionPeriod(); //No se en que sitios llega con que atributos, asi que lo pongo en todos
 
 
 		request.bind(entity, errors);
@@ -85,6 +84,7 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		
 		request.unbind(entity, model, "title", "description", "link", "startDate");
 		request.unbind(entity, model, "endingDate", "workload", "finished", "privacy", "executionPeriod");
+		model.setAttribute("readonly", false);
 	}
 
 	@Override
@@ -104,9 +104,8 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public void update(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
-		if(entity.getExecutionPeriod()==null && entity.getStartDate()!=null) entity.setExecutionPeriod();
 	
-		
+		entity.setExecutionPeriod();
 		this.repository.save(entity);
 	}
 }

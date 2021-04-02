@@ -8,34 +8,36 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-employer.job.list.title = Ofertas de trabajo
-employer.job.list.label.reference = Referencia
-employer.job.list.label.deadline = Fecha límite
-employer.job.list.label.title = Título
+manager.task.list.title = Tus tareas
+manager.task.list.label.title = Título
+manager.task.list.label.description = Descripción
+manager.task.list.label.link = Link
+manager.task.list.label.startDate = Inicio
+manager.task.list.label.endingDate = Final
+manager.task.list.label.workload = Carga de trabajo
+manager.task.list.label.finished = Estado
+manager.task.list.label.privacy = Privacidad
 
-employer.job.form.title.show = Oferta de empleo
-employer.job.form.title.create = Crear oferta 
-employer.job.form.title.update = Actualizar oferta
-employer.job.form.title.delete = Borrar oferta
+manager.task.form.title.show = Tarea
+manager.task.form.title.create = Crear tarea 
+manager.task.form.title.update = Actualizar tarea
+manager.task.form.title.delete = Borrar tarea
 
-employer.job.form.title.list-all = Todas las ofertas
-employer.job.form.title.list-mine = Mis ofertas
-employer.job.form.title.publish = Publicar oferta
-
-employer.job.form.label.reference = Referencia: 
-employer.job.form.label.title = Título:
-employer.job.form.label.deadline = Fecha límite:
-employer.job.form.label.salary = Salario:
-employer.job.form.label.score = Score:
-employer.job.form.label.moreInfo = Más información: (Opcional)
-employer.job.form.label.description = Descripción:
+manager.task.form.label.title = Título: 
+manager.task.form.label.description = Descripción:
+manager.task.form.label.link = Link:
+manager.task.form.label.startDate = Inicio:
+manager.task.form.label.endingDate = Final:
+manager.task.form.label.workload = Carga de trabajo:
+manager.task.form.label.finished = Estado
+manager.task.form.label.privacy = Privacidad
 		
-employer.job.form.button.update = Actualizar
-employer.job.form.button.delete = Borrar
-employer.job.form.button.publish = Publicar
-employer.job.form.button.create = Crear
-employer.job.form.button.return = Volver
+manager.task.form.button.update = Actualizar
+manager.task.form.button.delete = Borrar
+manager.task.form.button.create = Crear
+manager.task.form.button.return = Volver
 
-employer.job.form.error.duplicated = Esta referencia no está libre
-employer.job.form.error.too-close = La fecha límite debe ser en una semana como mínimo
-employer.job.form.error.spam = Su trabajo parece contener spam
+manager.task.form.error.past_task = La fecha de inicio debe ser en el futuro
+manager.task.form.error.incorrect_finish = La fecha de fin debe ser posterior a la de inicio
+manager.task.form.error.work_overload = La carga de trabajo es mayor que el tiempo entre las dos fechas
+manager.task.form.error.execution_period_null = Se ha producido un error al asignar el tiempo de ejecución

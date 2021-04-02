@@ -54,7 +54,6 @@ public class Task extends DomainEntity {
     @NotNull
     protected Boolean finished;
     
-    @NotNull
     protected Double executionPeriod;
     
  // Derived attributes -----------------------------------------------------

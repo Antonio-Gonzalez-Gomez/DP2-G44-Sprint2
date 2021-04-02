@@ -40,16 +40,20 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		entity.setExecutionPeriod();
 		
 		if (!errors.hasErrors("past_task")) {
-			errors.state(request, entity.getStartDate().before(Date.from(Instant.now())), "past_task", "manager.task.form.error.past_task");
+			errors.state(request, entity.getStartDate().after(Date.from(Instant.now())), "past_task", "manager.task.form.error.past_task");
 		}
 		
 		if (!errors.hasErrors("incorrect_finish")) {
-			errors.state(request, entity.getEndingDate().before(entity.getStartDate()), "incorrect_finish", "manager.task.form.error.incorrect_finish");
+			errors.state(request, entity.getEndingDate().after(entity.getStartDate()), "incorrect_finish", "manager.task.form.error.incorrect_finish");
+		}
+		
+		if (!errors.hasErrors("execution_period_null")) {
+			errors.state(request, entity.getExecutionPeriod() != null , "execution_period_null", "manager.task.form.error.execution_period_null");
 		}
 		
 		if (!errors.hasErrors("work_overload")) {
 			final Double workloadMin = entity.getWorkload()*60;
-			errors.state(request, workloadMin > entity.getExecutionPeriod(), "work_overload", "manager.task.form.error.work_overload");
+			errors.state(request, workloadMin < entity.getExecutionPeriod(), "work_overload", "manager.task.form.error.work_overload");
 		}
 	}
 		
@@ -58,7 +62,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if(entity.getExecutionPeriod()==null && entity.getStartDate()!=null) entity.setExecutionPeriod(); //No se en que sitios llega con que atributos, asi que lo pongo en todos
 		
 		request.bind(entity, errors);
 	}
@@ -68,10 +71,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		if(entity.getExecutionPeriod()==null && entity.getStartDate()!=null) entity.setExecutionPeriod();
 		
 		request.unbind(entity, model, "title", "description", "link", "startDate");
 		request.unbind(entity, model, "endingDate", "workload", "finished", "privacy", "executionPeriod");
+		model.setAttribute("readonly", false);
 	}
 		
 	@Override
@@ -92,7 +95,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	public void create(final Request<Task> request, final Task entity) {
 		assert request != null;
 		assert entity != null;
-		if(entity.getExecutionPeriod()==null && entity.getStartDate()!=null) entity.setExecutionPeriod();
 		
 		this.repository.save(entity);
 	}

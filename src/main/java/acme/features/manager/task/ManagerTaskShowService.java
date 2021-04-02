@@ -47,7 +47,8 @@ public class ManagerTaskShowService implements AbstractShowService<Manager, Task
 		assert model != null;
 
 		request.unbind(entity, model, "title", "description", "link", "startDate");
-		request.unbind(entity, model, "endingDate", "workload", "finished", "privacy");
+		request.unbind(entity, model, "endingDate", "workload", "finished", "privacy", "executionPeriod");
+		model.setAttribute("readonly", true);
 	}
 
 	@Override
