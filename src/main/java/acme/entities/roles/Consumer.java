@@ -1,5 +1,5 @@
 /*
- * UserIdentity.java
+ * Consumer.java
  *
  * Copyright (C) 2012-2021 Rafael Corchuelo.
  *
@@ -10,24 +10,19 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.datatypes;
+package acme.entities.roles;
 
-import java.beans.Transient;
-
-import javax.persistence.Embeddable;
-import javax.validation.constraints.Email;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
-import acme.framework.datatypes.DomainDatatype;
+import acme.framework.entities.UserRole;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
-@Embeddable
+@Entity
 @Getter
 @Setter
-@ToString
-public class UserIdentity extends DomainDatatype {
+public class Consumer extends UserRole {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -36,28 +31,13 @@ public class UserIdentity extends DomainDatatype {
 	// Attributes -------------------------------------------------------------
 
 	@NotBlank
-	protected String			name;
+	protected String			company;
 
 	@NotBlank
-	protected String			surname;
-
-	@NotBlank
-	@Email
-	protected String			email;
+	protected String			sector;
 
 	// Derived attributes -----------------------------------------------------
 
-
-	@Transient
-	public String getFullName() {
-		StringBuilder result;
-
-		result = new StringBuilder();
-		result.append(this.surname);
-		result.append(", ");
-		result.append(this.name);
-
-		return result.toString();
-	}
+	// Relationships ----------------------------------------------------------
 
 }

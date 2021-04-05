@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <!--
-- sample-data.xml
+- tiles.xml
 -
 - Copyright (C) 2012-2021 Rafael Corchuelo.
 -
@@ -12,11 +12,14 @@
 - they accept any liabilities with respect to them.
 -->
 
-<beans 
-	xmlns="http://www.springframework.org/schema/beans" 
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
-	<import resource="classpath:/WEB-INF/population/conversion-service.xml"/>	
+<tiles-definitions>
 
-</beans>
+	<definition name="authenticated/consumer/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/consumer/form.jsp" />
+	</definition>
+	
+</tiles-definitions>

@@ -1,4 +1,4 @@
-# README.txt
+# i18n_en.messages
 #
 # Copyright (C) 2012-2021 Rafael Corchuelo.
 #
@@ -8,7 +8,12 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-This is the Starter Project, which is intended to be a core learning asset for the students
-who have enroled the Design and Testing subject of the Software Engineering curriculum of the 
-University of Sevilla.  This project helps them start working on their new information system 
-projects.
+authenticated.provider.provider.form.title.create = Become an provider
+authenticated.provider.provider.form.title.update = Update provider data
+
+authenticated.provider.form.label.company = Company: 
+authenticated.provider.form.label.sector = Sector:
+
+authenticated.provider.form.button.create = Register
+authenticated.provider.form.button.update = Update
+authenticated.provider.form.button.return = Return
