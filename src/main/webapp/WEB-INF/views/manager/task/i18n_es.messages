@@ -37,7 +37,7 @@ manager.task.form.button.delete = Borrar
 manager.task.form.button.create = Crear
 manager.task.form.button.return = Volver
 
-manager.task.form.error.past_task = La fecha de inicio debe ser en el futuro
+manager.task.form.error.past_task = La fecha de inicio debe ser en el futuro o la tarea debe estar terminada
 manager.task.form.error.incorrect_finish = La fecha de fin debe ser posterior a la de inicio
 manager.task.form.error.work_overload = La carga de trabajo es mayor que el tiempo entre las dos fechas
 manager.task.form.error.execution_period_null = Se ha producido un error al asignar el tiempo de ejecución

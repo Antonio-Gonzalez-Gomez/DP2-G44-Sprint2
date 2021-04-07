@@ -49,23 +49,23 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		entity.setExecutionPeriod();
+		if(entity.getStartDate() != null && entity.getEndingDate() != null) entity.setExecutionPeriod();
 		
-		if (!errors.hasErrors("past_task")) {
-			errors.state(request, entity.getStartDate().after(Date.from(Instant.now())), "past_task", "manager.task.form.error.past_task");
+		if (!errors.hasErrors("past_task") && entity.getStartDate() != null) {
+			errors.state(request, (entity.getStartDate().after(Date.from(Instant.now())) || entity.getFinished()==true), "startDate", "manager.task.form.error.past_task");
 		}
 		
-		if (!errors.hasErrors("incorrect_finish")) {
-			errors.state(request, entity.getEndingDate().after(entity.getStartDate()), "incorrect_finish", "manager.task.form.error.incorrect_finish");
+		if (!errors.hasErrors("incorrect_finish") && entity.getStartDate() != null && entity.getEndingDate() != null) {
+			errors.state(request, entity.getEndingDate().after(entity.getStartDate()), "endingDate", "manager.task.form.error.incorrect_finish");
 		}
 		
-		if (!errors.hasErrors("execution_period_null")) {
-			errors.state(request, entity.getExecutionPeriod() != null , "execution_period_null", "manager.task.form.error.execution_period_null");
+		if (!errors.hasErrors("execution_period_null") && entity.getExecutionPeriod() != null) {
+			errors.state(request, entity.getExecutionPeriod() != null , "executionPeriod", "manager.task.form.error.execution_period_null");
 		}
 		
-		if (!errors.hasErrors("work_overload")) {
+		if (!errors.hasErrors("work_overload") && entity.getExecutionPeriod() != null && entity.getWorkload() != null) {
 			final Double workloadMin = entity.getWorkload()*60;
-			errors.state(request, workloadMin < entity.getExecutionPeriod(), "work_overload", "manager.task.form.error.work_overload");
+			errors.state(request, workloadMin < entity.getExecutionPeriod(), "workload", "manager.task.form.error.work_overload");
 		}
 	}
 

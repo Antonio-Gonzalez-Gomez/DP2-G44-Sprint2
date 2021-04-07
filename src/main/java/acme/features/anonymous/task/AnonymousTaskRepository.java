@@ -5,7 +5,7 @@ import java.util.Collection;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.entities.task.Task;
+import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
