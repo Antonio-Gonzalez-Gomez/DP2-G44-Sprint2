@@ -6,6 +6,7 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.filters.SpamFilter;
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
 import acme.framework.components.Errors;
@@ -22,6 +23,12 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	@Autowired
 	protected ManagerTaskRepository repository;
 
+	private final SpamFilter filter;
+	
+	public ManagerTaskUpdateService() {
+		this.filter = new SpamFilter("spam.txt", 10.0);
+	}
+	
 	// AbstractListService<Employer, Job> -------------------------------------
 
 
@@ -48,6 +55,8 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
+		assert this.filter.validate(entity.getTitle());
+		assert this.filter.validate(entity.getDescription());
 		assert errors != null;
 		if(entity.getStartDate() != null && entity.getEndingDate() != null) entity.setExecutionPeriod();
 		
