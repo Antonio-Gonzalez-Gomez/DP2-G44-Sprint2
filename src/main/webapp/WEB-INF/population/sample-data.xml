@@ -145,4 +145,59 @@
 		<property name="executionPeriod" value="3000"/>
 		<property name="manager" ref="manager2Manager"/>
 	</bean>
+	
+	<!-- Filter -->
+	<bean id="filter1" class="acme.entities.filters.Filter">
+		<property name="threshold" value="10.0"/>
+	</bean>
+	
+	<bean id="word1" class="acme.entities.filters.Word">
+		<property name="word" value="sexo"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word2" class="acme.entities.filters.Word">
+		<property name="word" value="hasganado"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word3" class="acme.entities.filters.Word">
+		<property name="word" value="millóndedolares"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word4" class="acme.entities.filters.Word">
+		<property name="word" value="sex"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word5" class="acme.entities.filters.Word">
+		<property name="word" value="hardcore"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word6" class="acme.entities.filters.Word">
+		<property name="word" value="viagra"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word7" class="acme.entities.filters.Word">
+		<property name="word" value="cialis"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word8" class="acme.entities.filters.Word">
+		<property name="word" value="nigeria"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word9" class="acme.entities.filters.Word">
+		<property name="word" value="you'vewon"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
+	
+	<bean id="word10" class="acme.entities.filters.Word">
+		<property name="word" value="milliondollar"/>
+		<property name="filter" ref="filter1"/>
+	</bean>
 </beans>

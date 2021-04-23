@@ -6,9 +6,9 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.filters.SpamFilter;
 import acme.entities.roles.Manager;
 import acme.entities.tasks.Task;
+import acme.features.administrator.spamFilter.AdministratorSpamFilterValidateService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -23,11 +23,8 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	@Autowired
 	protected ManagerTaskRepository repository;
 
-	private final SpamFilter filter;
-	
-	public ManagerTaskUpdateService() {
-		this.filter = new SpamFilter("spam.txt", 10.0);
-	}
+	@Autowired
+	private AdministratorSpamFilterValidateService filter;
 	
 	// AbstractListService<Employer, Job> -------------------------------------
 
@@ -55,8 +52,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		assert this.filter.validate(entity.getTitle());
-		assert this.filter.validate(entity.getDescription());
+		if (this.filter.validate(entity.getTitle(), 1))
+			errors.add("title", "contains spam words over the threshold");
+		if (this.filter.validate(entity.getDescription(), 1))
+			errors.add("description", "contains spam words over the threshold");
 		assert errors != null;
 		if(entity.getStartDate() != null && entity.getEndingDate() != null) entity.setExecutionPeriod();
 		
@@ -76,6 +75,8 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 			final Double workloadMin = entity.getWorkload()*60;
 			errors.state(request, workloadMin < entity.getExecutionPeriod(), "workload", "manager.task.form.error.work_overload");
 		}
+		
+		
 	}
 
 	@Override

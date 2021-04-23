@@ -5,8 +5,8 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.filters.SpamFilter;
 import acme.entities.shouts.Shout;
+import acme.features.administrator.spamFilter.AdministratorSpamFilterValidateService;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -21,11 +21,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	@Autowired
 	protected AnonymousShoutRepository repository;
 	
-	private final SpamFilter filter;
-	
-	public AnonymousShoutCreateService() {
-		this.filter = new SpamFilter("spam.txt", 10.0);
-	}
+	@Autowired
+	private AdministratorSpamFilterValidateService filter;
 
 	// AbstractCreateService<Administrator, Shout> interface --------------
 
@@ -76,7 +73,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	public void validate(final Request<Shout> request, final Shout entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		assert this.filter.validate(entity.getText());
+		if (this.filter.validate(entity.getText(), 1))
+			errors.add("text", "contains spam words over the threshold");
 		assert errors != null;
 
 	}
