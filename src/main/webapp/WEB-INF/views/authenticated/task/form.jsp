@@ -16,14 +16,15 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-    <acme:form-textbox code="authenticated.task.form.label.title" path="refetitlerence"/>
-    <acme:form-textbox code="authenticated.task.form.label.description" path="description"/>
-    <acme:form-moment code="authenticated.task.form.label.link" path="link"/>
-    <acme:form-money code="authenticated.task.form.label.startDate" path="startDate"/>
-    <acme:form-money code="authenticated.task.form.label.endingDate" path="endingDate"/>
-    <acme:form-url code="authenticated.task.form.label.workload" path="workload"/>
-    <acme:form-textarea code="authenticated.task.form.label.finished" path="finished"/>
-    <acme:form-textarea code="authenticated.task.form.label.privacy" path="privacy"/>
+    <acme:form-textbox code="authenticated.task.form.label.title" path="title" readonly="true"/>
+    <acme:form-textarea code="authenticated.task.form.label.description" path="description" readonly="true"/>
+    <acme:form-url code="authenticated.task.form.label.link" path="link" readonly="true"/>
+    <acme:form-moment code="authenticated.task.form.label.startDate" path="startDate" readonly="true"/>
+    <acme:form-moment code="authenticated.task.form.label.endingDate" path="endingDate" readonly="true"/>
+    <acme:form-double code="authenticated.task.form.label.workload" path="workload" readonly="true"/>
     
     <acme:form-return code="authenticated.task.form.button.return"/>    
 </acme:form>
+
+
+
