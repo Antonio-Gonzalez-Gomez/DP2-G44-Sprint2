@@ -18,4 +18,7 @@ public interface AdministratorSpamFilterRepository extends AbstractRepository{
 	
 	@Query("SELECT DISTINCT f from Filter f")
 	List<Filter> findFilters();
+
+	@Query("select f from Filter f where f.id = ?1")
+	Filter findOneFilterById(int id);
 }
