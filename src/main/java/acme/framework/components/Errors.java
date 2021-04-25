@@ -118,5 +118,12 @@ public class Errors implements Iterable<Entry<String, List<String>>> {
 
 		return result;
 	}
+	
+	public void deleteError(final String attributeName) {
+		assert !StringHelper.isBlank(attributeName);
+		assert this.hasErrors(attributeName);
+		
+		this.map.remove(attributeName);
+	}
 
 }

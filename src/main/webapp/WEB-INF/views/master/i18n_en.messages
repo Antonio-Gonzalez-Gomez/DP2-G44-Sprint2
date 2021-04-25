@@ -35,6 +35,8 @@ master.menu.anonymous.favourite-link = List Shouts
 
 master.menu.administrator = Administrator
 master.menu.administrator.dashboard = Dashboard
+master.menu.administrator.words = Change filter words
+master.menu.administrator.treshold = Change filter treshold
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
