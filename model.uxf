@@ -1,7 +1,40 @@
-<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>740</x><y>360</y><w>240</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>444</x>
+      <y>216</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
 UserRole
 --
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>360</y><w>80</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>260</y><w>220</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Datatype&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>216</y>
+      <w>48</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>60.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>156</y>
+      <w>132</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 UserIdentity
 --
 + name: String {NotBlank}
@@ -10,41 +43,184 @@ UserIdentity
 + / fullName: String {NotBlank}
 
 bg=orange
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLNote</id><coordinates><x>240</x><y>170</y><w>240</w><h>60</h></coordinates><panel_attributes>The full name catenates the 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>144</x>
+      <y>102</y>
+      <w>144</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>The full name catenates the 
 surname, a comma, and the name.
-bg=blue</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>220</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=..
-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>680</x><y>410</y><w>90</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>370</y><w>100</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>204</x>
+      <y>132</y>
+      <w>18</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=..
+</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>408</x>
+      <y>246</y>
+      <w>54</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>222</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Administrator
 --
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>290</y><w>100</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>174</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Anonymous
 --
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>440</y><w>100</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>264</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Authenticated
 --
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>380</y><w>140</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>970</x><y>380</y><w>140</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;70</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>400</y><w>220</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>228</y>
+      <w>84</w>
+      <h>18</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>582</x>
+      <y>228</y>
+      <w>84</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>240</y>
+      <w>132</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
 CustomCommand
 --
 
 
-bg=orange</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>490</x><y>330</y><w>200</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>198</y>
+      <w>120</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Provider
 --
 + company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>440</y><w>210</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>264</y>
+      <w>126</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Consumer
 --
 + company: String {NotBlank}
-+ sector: String {NotBlank}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>260</y><w>220</w><h>80</h></coordinates><panel_attributes>&lt;&lt;Datatype&gt;&gt;
++ sector: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>156</y>
+      <w>132</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 Money
 --
 + amount: double {Digits(10, 2)}
 + currentcy: String {NotBlank}
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>360</y><w>220</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>216</y>
+      <w>132</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
 BasicCommand
 --
 + LIST
@@ -53,13 +229,35 @@ BasicCommand
 + UPDATE
 + DELETE
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>510</y><w>220</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>306</y>
+      <w>132</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
 HttpMethod
 --
 + GET
 + POST
 
-bg=yellow</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>120</y><w>340</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>408</x>
+      <y>72</y>
+      <w>204</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
 UserAccount
 --
 + username: String {Unique, NotBlank, Length(5, 60)}
@@ -70,16 +268,49 @@ UserAccount
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>240</y><w>60</w><h>140</h></coordinates><panel_attributes>lt=&lt;-&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>144</y>
+      <w>42</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-&gt;
 m1=1
 m2=*
-has v</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>UMLClass</id><coordinates><x>630</x><y>580</y><w>390</w><h>180</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+has v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>378</x>
+      <y>348</y>
+      <w>234</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Shout
 --
 + moment: Date(NotNull, Temporal(TIMESTAMP), Past}
 + author: String {NotBlank}
 + text: String {NotBlank}
-+ info: String {URL}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1090</x><y>0</y><w>350</w><h>250</h></coordinates><panel_attributes>&lt;&lt;Form&gt;&gt;
++ info: String {URL}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>654</x>
+      <y>0</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Form&gt;&gt;
 Dashboard
 --
 + averageTaskExecutionPeriod: double
@@ -93,15 +324,94 @@ Dashboard
 + ratioOfPublicTasks: double
 + ratioOfPrivateTasks: double
 + ratioOfFinishedTasks: double
-+ ratioOfUnfinishedTasks: double</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>470</y><w>100</w><h>60</h></coordinates><panel_attributes>&lt;&lt;Role&gt;&gt;
++ ratioOfUnfinishedTasks: double</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>486</x>
+      <y>282</y>
+      <w>60</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Role&gt;&gt;
 Manager
---</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>410</y><w>30</w><h>80</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>660</y><w>190</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>246</y>
+      <w>18</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>396</y>
+      <w>114</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Word
 --
-+ word: String {NotBlank}</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>240</x><y>490</y><w>190</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
++ word: String {NotBlank}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>294</y>
+      <w>114</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Filter
 --
-+ threshold: Double {NotNull}</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>550</y><w>90</w><h>130</h></coordinates><panel_attributes>lt=-
++ threshold: Double {NotNull}</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>192</x>
+      <y>330</y>
+      <w>60</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=-
 m1=1
 m2=0..n
-contains &gt;</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element></diagram>
+contains &gt;</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>636</x>
+      <y>348</y>
+      <w>234</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Task
+--
++ title: String {NotEmpty}
++ description: String {NotBlank}
++ startDate: Date(NotNull, Temporal(TIMESTAMP)}
++ endingDate: Date(NotNull, Temporal(TIMESTAMP)}
++ link: String {URL}
++ workload : Double {NotNull}
++ finished: Boolean {NotNull}
++ executionPeriod: Double</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
