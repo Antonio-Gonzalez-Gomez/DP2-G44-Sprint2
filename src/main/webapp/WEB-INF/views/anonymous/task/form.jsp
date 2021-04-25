@@ -22,7 +22,7 @@
     <acme:form-moment code="anonymous.task.form.label.startDate" path="startDate" readonly="true"/>
     <acme:form-moment code="anonymous.task.form.label.endingDate" path="endingDate" readonly="true"/>
     <acme:form-double code="anonymous.task.form.label.workload" path="workload" readonly="true"/>
-    <acme:form-textbox code="anonymous.task.form.label.privacy" path="privacy" readonly="true"/>
+ 
     
     <acme:form-return code="anonymous.task.form.button.return"/>    
 </acme:form>

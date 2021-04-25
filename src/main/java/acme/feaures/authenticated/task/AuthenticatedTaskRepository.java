@@ -1,4 +1,4 @@
-package acme.features.anonymous.task;
+package acme.feaures.authenticated.task;
 
 import java.util.Collection;
 
@@ -9,13 +9,13 @@ import acme.entities.tasks.Task;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface AnonymousTaskRepository extends AbstractRepository {
+public interface AuthenticatedTaskRepository extends AbstractRepository {
 
     @Query("select t from Task t")
     Collection<Task> findMany();
     
-    @Query("select t from Task t where t.privacy = false")
-    Collection<Task> findtaskspubli();
+    @Query("select t from Task t where t.privacy = true")
+    Collection<Task> findtasksprivacy();
     
     @Query("select t from Task t where t.id = ?1")
     Task findOneTaskById(int id);
