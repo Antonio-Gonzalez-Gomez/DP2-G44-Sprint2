@@ -1,4 +1,4 @@
-package acme.features.anonymous.task;
+package acme.feaures.authenticated.task;
 
 import java.util.Collection;
 
@@ -8,16 +8,16 @@ import org.springframework.stereotype.Service;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class AnonymousTaskListService implements AbstractListService<Anonymous, Task>{
+public class AuthenticatedTaskListService implements AbstractListService<Authenticated, Task>{
 
     // Internal state ---------------------------------------------------------
 
         @Autowired
-        protected AnonymousTaskRepository repository;
+        protected AuthenticatedTaskRepository repository;
 
 
         // AbstractListService<Administrator, Task> interface --------------
@@ -45,7 +45,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
 
             Collection<Task> result;
 
-            result = this.repository.findtaskspubli();
+            result = this.repository.findMany();
 
             return result;
         }
