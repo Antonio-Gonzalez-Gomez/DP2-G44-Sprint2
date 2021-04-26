@@ -40,10 +40,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		if (this.filter.validate(entity.getTitle(), 1))
-			errors.add("title", "contains spam words over the threshold");
-		if (this.filter.validate(entity.getDescription(), 1))
-			errors.add("description", "contains spam words over the threshold");
+		if (this.filter.validate(entity.getTitle()))
+			errors.state(request, !this.filter.validate(entity.getTitle()), "title", "manager.task.form.error.title_spam");
+		if (this.filter.validate(entity.getDescription()))
+			errors.state(request, !this.filter.validate(entity.getDescription()), "description", "manager.task.form.error.description_spam");
 		assert errors != null;
 		if(entity.getStartDate() != null && entity.getEndingDate() != null) entity.setExecutionPeriod();
 		
@@ -53,10 +53,6 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 		
 		if (!errors.hasErrors("incorrect_finish") && entity.getStartDate() != null && entity.getEndingDate() != null) {
 			errors.state(request, entity.getEndingDate().after(entity.getStartDate()), "endingDate", "manager.task.form.error.incorrect_finish");
-		}
-		
-		if (!errors.hasErrors("execution_period_null") && entity.getExecutionPeriod() != null) {
-			errors.state(request, entity.getExecutionPeriod() != null , "executionPeriod", "manager.task.form.error.execution_period_null");
 		}
 		
 		if (!errors.hasErrors("work_overload") && entity.getExecutionPeriod() != null && entity.getWorkload() != null) {

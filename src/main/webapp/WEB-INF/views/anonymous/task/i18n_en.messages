@@ -11,14 +11,14 @@
 anonymous.task.form.label.title = Title
 anonymous.task.form.label.description = Description
 anonymous.task.form.label.link = Link
-anonymous.task.form.label.begin = Start date
-anonymous.task.form.label.end = Ending date
+anonymous.task.form.label.startDate = Start date
+anonymous.task.form.label.endingDate = Ending date
 anonymous.task.form.label.workload = Workload
 anonymous.task.form.label.privacy = Privacy
 
 
 anonymous.task.list.label.title = Title
 anonymous.task.list.label.startDate = Start date
-anonymous.task.list.label.endindDate = Ending date
+anonymous.task.list.label.endingDate = Ending date
 
 anonymous.task.form.button.return = Return

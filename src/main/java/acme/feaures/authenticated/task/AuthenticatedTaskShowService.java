@@ -1,4 +1,4 @@
-package acme.features.anonymous.task;
+package acme.feaures.authenticated.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,15 +6,15 @@ import org.springframework.stereotype.Service;
 import acme.entities.tasks.Task;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Anonymous;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AnonymousTaskShowService implements AbstractShowService<Anonymous, Task> {
+public class AuthenticatedTaskShowService implements AbstractShowService<Authenticated, Task> {
     // Internal state ---------------------------------------------------------
 
         @Autowired
-        protected AnonymousTaskRepository repository;
+        protected AuthenticatedTaskRepository repository;
         @Override
         public boolean authorise(final Request<Task> request) {
             assert request != null;
@@ -23,7 +23,7 @@ public class AnonymousTaskShowService implements AbstractShowService<Anonymous, 
             Task task;
             id = request.getModel().getInteger("id");
             task = this.repository.findOneTaskById(id);
-            for(final Task t : this.repository.findtaskspubli()) {
+            for(final Task t : this.repository.findMany()) {
                 if (t.getId() == task.getId()) {
                     result = true;
                 }

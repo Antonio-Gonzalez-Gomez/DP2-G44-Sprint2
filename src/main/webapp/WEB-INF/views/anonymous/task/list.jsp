@@ -18,5 +18,5 @@
 <acme:list>
     <acme:list-column code="anonymous.task.list.label.title" path="title" width="33%"/>
     <acme:list-column code="anonymous.task.list.label.startDate" path="startDate" width="33%"/>
-    <acme:list-column code="anonymous.task.list.label.endindDate" path="endindDate" width="33%"/>
+    <acme:list-column code="anonymous.task.list.label.endingDate" path="endingDate" width="33%"/>
 </acme:list>
