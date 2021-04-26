@@ -49,6 +49,30 @@
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
+	<!-- Authenticated -->
+	
+	<bean name="authenticated1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated1"/>
+		<property name="password" value="authenticated1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Inugami"/>
+				<property name="surname" value="Korone"/>
+				<property name="email" value="authenticated1@mail.com"/>
+			</bean>
+		</property>		
+		<property name="roles">
+			<list>
+				<ref bean="authenticated1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="authenticated1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticated1UserAccount"/>
+	</bean>
+	
 	<!-- Managers -->
 
 	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
