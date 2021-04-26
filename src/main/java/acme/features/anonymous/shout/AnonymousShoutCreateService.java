@@ -73,8 +73,8 @@ public class AnonymousShoutCreateService implements AbstractCreateService<Anonym
 	public void validate(final Request<Shout> request, final Shout entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		if (this.filter.validate(entity.getText(), 1))
-			errors.add("text", "contains spam words over the threshold");
+		if (this.filter.validate(entity.getText()))
+			errors.state(request, !this.filter.validate(entity.getText()), "text", "anonymous.shout.form.error.text_spam");
 		assert errors != null;
 
 	}

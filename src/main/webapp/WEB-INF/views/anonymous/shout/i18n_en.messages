@@ -17,3 +17,5 @@ anonymous.shout.form.label.return = Return
 anonymous.shout.list.label.moment = Moment
 anonymous.shout.list.label.author = Author
 anonymous.shout.list.label.text = Text
+
+anonymous.shout.form.error.text_spam = Contains too many spam words

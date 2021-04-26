@@ -52,10 +52,10 @@ public class ManagerTaskUpdateService implements AbstractUpdateService<Manager, 
 	public void validate(final Request<Task> request, final Task entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
-		if (this.filter.validate(entity.getTitle(), 1))
-			errors.add("title", "contains spam words over the threshold");
-		if (this.filter.validate(entity.getDescription(), 1))
-			errors.add("description", "contains spam words over the threshold");
+		if (this.filter.validate(entity.getTitle()))
+			errors.state(request, !this.filter.validate(entity.getTitle()), "title", "manager.task.form.error.title_spam");
+		if (this.filter.validate(entity.getDescription()))
+			errors.state(request, !this.filter.validate(entity.getDescription()), "description", "manager.task.form.error.description_spam");
 		assert errors != null;
 		if(entity.getStartDate() != null && entity.getEndingDate() != null) entity.setExecutionPeriod();
 		
