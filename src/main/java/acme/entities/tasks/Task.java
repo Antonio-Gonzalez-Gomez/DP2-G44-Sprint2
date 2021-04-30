@@ -16,6 +16,7 @@ import org.hibernate.validator.constraints.URL;
 
 import acme.entities.roles.Manager;
 import acme.framework.entities.DomainEntity;
+import acme.framework.entities.UserAccount;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,6 +27,8 @@ public class Task extends DomainEntity {
 
     protected static final long    serialVersionUID    = 1L;
     
+    @NotEmpty
+    protected UserAccount useraccount;
     @NotEmpty
     @Size(max = 80, message = "Max 80 characters")
     protected String title;
