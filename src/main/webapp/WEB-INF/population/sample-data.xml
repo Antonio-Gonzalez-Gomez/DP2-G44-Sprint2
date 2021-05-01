@@ -141,10 +141,24 @@
 		<property name="workload" value="6.0"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="true"/>
-		<property name="executionPeriod" value="3000"/>
+		<property name="executionPeriod" value="2700"/>
 		<property name="manager" ref="manager1Manager"/>
 	</bean>
 
+	<bean name="task2" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear lista de tasks para administrator"/>
+		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/05 12:00"/>
+		<property name="workload" value="7.0"/>
+		<property name="finished" value="true"/>
+		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="2000"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
 	<bean name="task3" class="acme.entities.tasks.Task">
 		
 		<property name="title" value="Crear lista de tasks para anonymous"/>
@@ -159,17 +173,45 @@
 		<property name="manager" ref="manager1Manager"/>
 	</bean>
 	
-	<bean name="task2" class="acme.entities.tasks.Task">
+	<bean name="task4" class="acme.entities.tasks.Task">
 		
-		<property name="title" value="Crear lista de tasks para administrator"/>
-		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="title" value="Crear servicio de la clase Shout"/>
+		<property name="description" value="Crear servicio de creación de la clase Shout para posterior implementación en Controller"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/1"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
-		<property name="endingDate" value="2021/04/05 12:00"/>
-		<property name="workload" value="7.0"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="5.0"/>
+		<property name="finished" value="false"/>
+		<property name="privacy" value="true"/>
+		<property name="executionPeriod" value="3500"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean name="task5" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Implementar filtro de spam"/>
+		<property name="description" value="Implementar filtro de spam que valide la información de Tasks y Shouts"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/11"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="10.0"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="false"/>
-		<property name="executionPeriod" value="3000"/>
+		<property name="executionPeriod" value="2500"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean name="task6" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear dashboard para administradores"/>
+		<property name="description" value="Dashboard con datos estadísticos con respecto a las Tasks"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/10"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="9.0"/>
+		<property name="finished" value="true"/>
+		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="3200"/>
 		<property name="manager" ref="manager2Manager"/>
 	</bean>
 	
