@@ -43,3 +43,4 @@ manager.task.form.error.work_overload = Workload is greater than time between th
 manager.task.form.error.execution_period_null = An error has occurred during the execution period establishment 
 manager.task.form.error.title_spam = Contains too many spam words
 manager.task.form.error.description_spam = Contains too many spam words
+manager.task.form.error.big_workload = Workload cant go over 100.0

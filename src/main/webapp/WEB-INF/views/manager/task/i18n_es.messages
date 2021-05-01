@@ -43,3 +43,4 @@ manager.task.form.error.work_overload = La carga de trabajo es mayor que el tiem
 manager.task.form.error.execution_period_null = Se ha producido un error al asignar el tiempo de ejecución
 manager.task.form.error.title_spam = Contiene demasiadas palabras de spam
 manager.task.form.error.description_spam = Contiene demasiadas palabras de spam
+manager.task.form.error.big_workload = La carga de trabajo no puede ser 100.0 o mayor

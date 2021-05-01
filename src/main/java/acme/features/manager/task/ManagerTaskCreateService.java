@@ -55,6 +55,10 @@ public class ManagerTaskCreateService implements AbstractCreateService<Manager, 
 			errors.state(request, entity.getEndingDate().after(entity.getStartDate()), "endingDate", "manager.task.form.error.incorrect_finish");
 		}
 		
+		if (!errors.hasErrors("big_workload") && entity.getWorkload() != null) {
+			errors.state(request, (entity.getWorkload()<=99.99), "workload", "manager.task.form.error.big_workload");
+		}
+		
 		if (!errors.hasErrors("work_overload") && entity.getExecutionPeriod() != null && entity.getWorkload() != null) {
 			final Double workloadMin = entity.getWorkload()*60;
 			errors.state(request, workloadMin < entity.getExecutionPeriod(), "workload", "manager.task.form.error.work_overload");
