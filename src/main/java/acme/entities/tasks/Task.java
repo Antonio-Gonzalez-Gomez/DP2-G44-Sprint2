@@ -26,6 +26,7 @@ public class Task extends DomainEntity {
 
     protected static final long    serialVersionUID    = 1L;
     
+    
     @NotEmpty
     @Size(max = 80, message = "Max 80 characters")
     protected String title;
