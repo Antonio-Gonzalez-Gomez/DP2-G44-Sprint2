@@ -30,13 +30,13 @@ master.menu.sign-out = Sign out
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = List Shouts
+master.menu.anonymous.task = List Tasks
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.task = List Tasks
 master.menu.administrator.dashboard = Dashboard
-master.menu.administrator.words = Change filter words
-master.menu.administrator.treshold = Change filter treshold
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
@@ -47,13 +47,7 @@ master.menu.administrator.shutdown = Shut down
 master.menu.provider = Provider
 master.menu.provider.favourite-link = List Shouts
 
-# master.menu.manager #########################################################
-
-master.menu.manager = Manager
-master.menu.manager.manager-tasks = My tasks
-master.menu.manager.create-task = New task
-
-# master.menu.worker ##########################################################
+# master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = List Shouts
@@ -66,7 +60,6 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
-master.menu.user-account.become-manager = Become a manager
 
 # master.footer ###############################################################
 
@@ -114,4 +107,6 @@ master.panic.label.request = Request:
 master.panic.label.status = Status:
 master.panic.label.exceptions = Exceptions:
 master.panic.text.consult-log = Please, consult the log to see them full stack trace.
+
+
 
