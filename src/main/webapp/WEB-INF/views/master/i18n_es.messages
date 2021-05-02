@@ -13,6 +13,8 @@ master.menu.administrator = Administrador
 master.menu.administrator.task = Listado de Tareas
 master.menu.administrator.dashboard = Panel de indicadores
 master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.spamfilter = Cambiar umbral del filtro
+master.menu.administrator.word = Cambiar palabras del filtro
 master.menu.administrator.populate-initial = Poblar BD (inicial)
 master.menu.administrator.populate-sample = Poblar BD (ejemplos)
 master.menu.administrator.shutdown = Parar el sistema
@@ -27,6 +29,12 @@ master.menu.provider.favourite-link = Listado de Shouts
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Listado de Shouts
 
+# master.menu.manager ##########################################################
+
+master.menu.manager = Gerente
+master.menu.manager.manager-tasks = Mis tareas
+master.menu.manager.create-task = Nueva Tarea
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -35,6 +43,8 @@ master.menu.user-account.provider = Datos de proveedor
 master.menu.user-account.become-provider = Hazte proveedor
 master.menu.user-account.consumer = Datos de consumidor
 master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.user-account.become-manager = Hazte gerente
+master.menu.user-account.manager = Datos de gerenete
 
 ﻿# master.footer ###############################################################
 

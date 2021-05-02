@@ -38,6 +38,8 @@ master.menu.administrator = Administrator
 master.menu.administrator.task = List Tasks
 master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.spamfilter = Change filter threshold
+master.menu.administrator.word = Change filter words
 master.menu.administrator.populate-initial = Populate DB (initial)
 master.menu.administrator.populate-sample = Populate DB (samples)
 master.menu.administrator.shutdown = Shut down
@@ -52,6 +54,12 @@ master.menu.provider.favourite-link = List Shouts
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = List Shouts
 
+# master.menu.manager ##########################################################
+
+master.menu.manager = Manager
+master.menu.manager.manager-tasks = My tasks
+master.menu.manager.create-task = New task
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -60,6 +68,8 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.become-manager = Become a Manager
+master.menu.user-account.manager = Manager data
 
 # master.footer ###############################################################
 

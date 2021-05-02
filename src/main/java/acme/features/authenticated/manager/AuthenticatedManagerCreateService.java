@@ -1,6 +1,7 @@
 package acme.features.authenticated.manager;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.stereotype.Service;
 
 import acme.entities.roles.Manager;
@@ -29,6 +30,11 @@ public class AuthenticatedManagerCreateService implements AbstractCreateService<
 	@Override
 	public boolean authorise(final Request<Manager> request) {
 		assert request != null;
+		
+		for(final GrantedAuthority auth:request.getPrincipal().getAuthorities()) {
+			if(auth.getAuthority().equals("AUTH_Manager")) return false;
+			if(auth.getAuthority().equals("AUTH_Administrator")) return false;
+		}
 
 		return true;
 	}
