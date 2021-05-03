@@ -19,8 +19,9 @@
 <acme:menu-bar code="master.menu.home">
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://localhost:8080/Acme-One/anonymous/shout/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.task" action="http://localhost:8080/Acme-One/anonymous/task/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="/anonymous/shout/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.shouts" action="/anonymous/shout/create"/>
+			<acme:menu-suboption code="master.menu.anonymous.task" action="/anonymous/task/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
