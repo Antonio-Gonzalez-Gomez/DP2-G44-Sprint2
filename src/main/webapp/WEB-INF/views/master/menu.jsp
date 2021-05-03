@@ -42,6 +42,10 @@
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
 			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://localhost:8080/Acme-One/anonymous/shout/list"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="hasRole('Authenticated')">
+            <acme:menu-suboption code="master.menu.authenticated.task" action="http://localhost:8080/Acme-One/authenticated/task/list"/>
+        </acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://localhost:8080/Acme-One/anonymous/shout/list"/>

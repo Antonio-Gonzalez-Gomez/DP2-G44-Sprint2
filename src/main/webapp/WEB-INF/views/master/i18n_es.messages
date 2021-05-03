@@ -25,6 +25,11 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Listado de Shouts
 
+# master.menu.authenticated#######################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.task = Listado de tareas
+
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
