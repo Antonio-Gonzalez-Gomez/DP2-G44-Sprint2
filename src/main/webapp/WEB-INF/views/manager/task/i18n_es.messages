@@ -15,8 +15,8 @@ manager.task.list.label.link = Link
 manager.task.list.label.startDate = Inicio
 manager.task.list.label.endingDate = Final
 manager.task.list.label.workload = Carga de trabajo
-manager.task.list.label.finished = Estado
-manager.task.list.label.privacy = Privacidad
+manager.task.list.label.finished = ¿Está terminada?
+manager.task.list.label.privacy = ¿Es privada?
 
 manager.task.form.title.show = Tarea
 manager.task.form.title.create = Crear tarea 
