@@ -6,6 +6,7 @@ master.menu.sign-out = Salir
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Listado de Shouts
 master.menu.anonymous.task = Listado de Tareas
+master.menu.anonymous.shouts = Crear Shout
 
 # master.menu.administrator ###################################################
 
