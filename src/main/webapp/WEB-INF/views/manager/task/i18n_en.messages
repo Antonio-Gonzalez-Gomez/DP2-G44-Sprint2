@@ -15,8 +15,8 @@ manager.task.list.label.link = Link
 manager.task.list.label.startDate = Start
 manager.task.list.label.endingDate = Ending
 manager.task.list.label.workload = Workload
-manager.task.list.label.finished = Status
-manager.task.list.label.privacy = Privacy
+manager.task.list.label.finished = Is finished?
+manager.task.list.label.privacy = Is private?
 
 manager.task.form.title.show = Task
 manager.task.form.title.create = Create Task
