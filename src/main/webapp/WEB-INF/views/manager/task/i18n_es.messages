@@ -29,8 +29,8 @@ manager.task.form.label.link = Link:
 manager.task.form.label.startDate = Inicio:
 manager.task.form.label.endingDate = Final:
 manager.task.form.label.workload = Carga de trabajo:
-manager.task.form.label.finished = Estado
-manager.task.form.label.privacy = Privacidad
+manager.task.form.label.finished = ¿Está terminada?
+manager.task.form.label.privacy = ¿Es privada?
 		
 manager.task.form.button.update = Actualizar
 manager.task.form.button.delete = Borrar
