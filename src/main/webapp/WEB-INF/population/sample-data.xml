@@ -261,12 +261,12 @@
 	</bean>
 	
 	<bean id="word2" class="acme.entities.filters.Word">
-		<property name="word" value="hasganado"/>
+		<property name="word" value="has ganado"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
 	<bean id="word3" class="acme.entities.filters.Word">
-		<property name="word" value="millóndedolares"/>
+		<property name="word" value="millón de dólares"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
@@ -276,7 +276,7 @@
 	</bean>
 	
 	<bean id="word5" class="acme.entities.filters.Word">
-		<property name="word" value="hardcore"/>
+		<property name="word" value="hard core"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
@@ -296,12 +296,12 @@
 	</bean>
 	
 	<bean id="word9" class="acme.entities.filters.Word">
-		<property name="word" value="you'vewon"/>
+		<property name="word" value="you've won"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
 	<bean id="word10" class="acme.entities.filters.Word">
-		<property name="word" value="milliondollar"/>
+		<property name="word" value="million dollar"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 </beans>
