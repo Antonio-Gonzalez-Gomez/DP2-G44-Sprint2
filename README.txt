@@ -12,3 +12,6 @@ This is Acme-One project, which is intended to be a core learning asset for the 
 who have enroled the Design and Testing subject of the Software Engineering curriculum of the 
 University of Sevilla.  This project helps them start working on their new information system 
 projects.
+
+Repository: https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2
+Release: 
