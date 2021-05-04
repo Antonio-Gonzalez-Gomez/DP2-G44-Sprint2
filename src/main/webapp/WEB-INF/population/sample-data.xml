@@ -49,6 +49,41 @@
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 1"/>
+		<property name="text" value="Prueba 1"/>
+		<property name="moment" value="2021/03/26 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout06" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 2"/>
+		<property name="text" value="Prueba 2"/>
+		<property name="moment" value="2021/04/03 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout07" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 3"/>
+		<property name="text" value="Prueba 3"/>
+		<property name="moment" value="2021/04/10 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 4"/>
+		<property name="text" value="Prueba 4"/>
+		<property name="moment" value="2021/04/17 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="author" value="Luke Skywalker"/>
+		<property name="text" value="May the 4th be with you"/>
+		<property name="moment" value="2021/05/04 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
 	<!-- Authenticated -->
 	
 	<bean name="authenticated1UserAccount" class="acme.framework.entities.UserAccount">

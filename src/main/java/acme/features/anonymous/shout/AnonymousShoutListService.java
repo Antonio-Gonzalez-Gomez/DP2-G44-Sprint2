@@ -1,6 +1,9 @@
 package acme.features.anonymous.shout;
 
+import java.time.Instant;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,9 +45,18 @@ public class AnonymousShoutListService implements AbstractListService<Anonymous,
 	public Collection<Shout> findMany(final Request<Shout> request) {
 		assert request != null;
 
-		Collection<Shout> result;
+		final Collection<Shout> result = new ArrayList<Shout>();
+		Collection<Shout> allshouts;
 
-		result = this.repository.findMany();
+		allshouts = this.repository.findMany();
+		final Date monthAgo = Date.from(Instant.now());
+		final long monthMiliseconds = (long) 2592000000.;
+		monthAgo.setTime(monthAgo.getTime() - monthMiliseconds);
+		
+		for(final Shout s: allshouts) {
+			if(s.getMoment().getTime()<monthAgo.getTime()) continue;
+			result.add(s);
+		}
 
 		return result;
 	}
