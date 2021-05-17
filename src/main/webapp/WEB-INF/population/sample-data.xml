@@ -49,6 +49,65 @@
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
+	<bean id="shout05" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 1"/>
+		<property name="text" value="Prueba 1"/>
+		<property name="moment" value="2021/03/26 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout06" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 2"/>
+		<property name="text" value="Prueba 2"/>
+		<property name="moment" value="2021/04/03 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout07" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 3"/>
+		<property name="text" value="Prueba 3"/>
+		<property name="moment" value="2021/04/10 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout08" class="acme.entities.shouts.Shout">
+		<property name="author" value="Prueba 4"/>
+		<property name="text" value="Prueba 4"/>
+		<property name="moment" value="2021/04/17 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<bean id="shout09" class="acme.entities.shouts.Shout">
+		<property name="author" value="Luke Skywalker"/>
+		<property name="text" value="May the 4th be with you"/>
+		<property name="moment" value="2021/05/04 12:30"/>
+		<property name="info" value="http://www.sample-app.com"/>
+	</bean>
+	
+	<!-- Authenticated -->
+	
+	<bean name="authenticated1UserAccount" class="acme.framework.entities.UserAccount">
+		<property name="username" value="authenticated1"/>
+		<property name="password" value="authenticated1"/>
+		<property name="enabled" value="true"/>
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">		
+				<property name="name" value="Inugami"/>
+				<property name="surname" value="Korone"/>
+				<property name="email" value="authenticated1@mail.com"/>
+			</bean>
+		</property>		
+		<property name="roles">
+			<list>
+				<ref bean="authenticated1Authenticated"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="authenticated1Authenticated" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="authenticated1UserAccount"/>
+	</bean>
+	
 	<!-- Managers -->
 
 	<bean name="manager1UserAccount" class="acme.framework.entities.UserAccount">
@@ -108,41 +167,86 @@
 	<!-- Tasks -->
 
 	<bean name="task1" class="acme.entities.tasks.Task">
+		
 		<property name="title" value="Crear repositorio de la clase Task"/>
 		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
 		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/05 12:00"/>
-		<property name="workload" value="6"/>
+		<property name="workload" value="6.0"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="true"/>
-		<property name="executionPeriod" value="3000"/>
+		<property name="executionPeriod" value="2700"/>
 		<property name="manager" ref="manager1Manager"/>
 	</bean>
 
+	<bean name="task2" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear lista de tasks para administrator"/>
+		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/05 12:00"/>
+		<property name="workload" value="7.0"/>
+		<property name="finished" value="true"/>
+		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="2000"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
 	<bean name="task3" class="acme.entities.tasks.Task">
+		
 		<property name="title" value="Crear lista de tasks para anonymous"/>
 		<property name="description" value="Crear lista de las tasks para usuarios con anonymous "/>
 		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/8"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/05 12:00"/>
-		<property name="workload" value="8"/>
+		<property name="workload" value="8.0"/>
 		<property name="finished" value="false"/>
 		<property name="privacy" value="true"/>
 		<property name="executionPeriod" value="3000"/>
 		<property name="manager" ref="manager1Manager"/>
 	</bean>
 	
-	<bean name="task2" class="acme.entities.tasks.Task">
-		<property name="title" value="Crear lista de tasks para administrator"/>
-		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+	<bean name="task4" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear servicio de la clase Shout"/>
+		<property name="description" value="Crear servicio de creación de la clase Shout para posterior implementación en Controller"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/1"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
-		<property name="endingDate" value="2021/04/05 12:00"/>
-		<property name="workload" value="7"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="5.0"/>
+		<property name="finished" value="false"/>
+		<property name="privacy" value="true"/>
+		<property name="executionPeriod" value="3500"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean name="task5" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Implementar filtro de spam"/>
+		<property name="description" value="Implementar filtro de spam que valide la información de Tasks y Shouts"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/11"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="10.0"/>
 		<property name="finished" value="true"/>
 		<property name="privacy" value="false"/>
-		<property name="executionPeriod" value="3000"/>
+		<property name="executionPeriod" value="2500"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean name="task6" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear dashboard para administradores"/>
+		<property name="description" value="Dashboard con datos estadísticos con respecto a las Tasks"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/10"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="9.0"/>
+		<property name="finished" value="true"/>
+		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="3200"/>
 		<property name="manager" ref="manager2Manager"/>
 	</bean>
 	
@@ -157,12 +261,12 @@
 	</bean>
 	
 	<bean id="word2" class="acme.entities.filters.Word">
-		<property name="word" value="hasganado"/>
+		<property name="word" value="has ganado"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
 	<bean id="word3" class="acme.entities.filters.Word">
-		<property name="word" value="millóndedolares"/>
+		<property name="word" value="millón de dólares"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
@@ -172,7 +276,7 @@
 	</bean>
 	
 	<bean id="word5" class="acme.entities.filters.Word">
-		<property name="word" value="hardcore"/>
+		<property name="word" value="hard core"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
@@ -192,12 +296,12 @@
 	</bean>
 	
 	<bean id="word9" class="acme.entities.filters.Word">
-		<property name="word" value="you'vewon"/>
+		<property name="word" value="you've won"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 	
 	<bean id="word10" class="acme.entities.filters.Word">
-		<property name="word" value="milliondollar"/>
+		<property name="word" value="million dollar"/>
 		<property name="filter" ref="filter1"/>
 	</bean>
 </beans>

@@ -20,7 +20,7 @@ public class ManagerTaskListService implements AbstractListService<Manager, Task
 		@Autowired
 		protected ManagerTaskRepository repository;
 
-		// AbstractListService<Anonymous, Job>  interface -------------------------
+		// AbstractListService<Manager, Task>  interface -------------------------
 
 
 		@Override
