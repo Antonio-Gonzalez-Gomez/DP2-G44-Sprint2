@@ -11,7 +11,6 @@
 - Rafael Corchuelo (corchu@us.es)
 - Antonio González Gómez (antgongom4@alum.us.es)
 - Beatriz María Beltrán Álvarez (beabelalv@alum.us.es)
-- Daniel Caro Olmedo (danielcaroolmedo2@gmail.com)
 - Daniel Muñoz Heredia (danmuaher@alum.us.es)
 - David Barragan Salazar (davbarsal1@alum.us.es)
 - Vicente Soria Vázquez (vicsorvaz@alum.us.es)

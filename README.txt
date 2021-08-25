@@ -13,5 +13,5 @@ who have enroled the Design and Testing subject of the Software Engineering curr
 University of Sevilla.  This project helps them start working on their new information system 
 projects.
 
-Repository: https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2
-Release: 
+Repository: https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2
+Release: https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/releases/tag/v1.1.0
