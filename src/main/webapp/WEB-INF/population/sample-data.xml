@@ -170,7 +170,7 @@
 		
 		<property name="title" value="Crear repositorio de la clase Task"/>
 		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/2"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/05 12:00"/>
 		<property name="workload" value="6.0"/>
@@ -184,7 +184,7 @@
 		
 		<property name="title" value="Crear lista de tasks para administrator"/>
 		<property name="description" value="Crear repositorio de la clase Task para posterior implementación en Service"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/2"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/2"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/05 12:00"/>
 		<property name="workload" value="7.0"/>
@@ -198,7 +198,7 @@
 		
 		<property name="title" value="Crear lista de tasks para anonymous"/>
 		<property name="description" value="Crear lista de las tasks para usuarios con anonymous "/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/8"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/8"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/05 12:00"/>
 		<property name="workload" value="8.0"/>
@@ -212,7 +212,7 @@
 		
 		<property name="title" value="Crear servicio de la clase Shout"/>
 		<property name="description" value="Crear servicio de creación de la clase Shout para posterior implementación en Controller"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/1"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/1"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/06 12:00"/>
 		<property name="workload" value="5.0"/>
@@ -226,7 +226,7 @@
 		
 		<property name="title" value="Implementar filtro de spam"/>
 		<property name="description" value="Implementar filtro de spam que valide la información de Tasks y Shouts"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/11"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/11"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/06 12:00"/>
 		<property name="workload" value="10.0"/>
@@ -240,7 +240,7 @@
 		
 		<property name="title" value="Crear dashboard para administradores"/>
 		<property name="description" value="Dashboard con datos estadísticos con respecto a las Tasks"/>
-		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/issues/10"/>
+		<property name="link" value="https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/issues/10"/>
 		<property name="startDate" value="2021/04/03 10:00"/>
 		<property name="endingDate" value="2021/04/06 12:00"/>
 		<property name="workload" value="9.0"/>
