@@ -50,8 +50,8 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 			"minimumTaskExecutionPeriod", "maximumTaskExecutionPeriod", //
 			"averageTaskWorkload", "deviationTaskWorkload", //
 			"minimumTaskWorkload", "maximumTaskWorkload", //
-			"ratioOfPublicTasks", "ratioOfPrivateTasks", //
-			"ratioOfFinishedTasks", "ratioOfUnfinishedTasks");
+			"numberOfPublicTasks", "numberOfPrivateTasks", //
+			"numberOfFinishedTasks", "numberOfUnfinishedTasks");
 	}
 
 	@Override
@@ -67,10 +67,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		final Double deviationTaskWorkload;
 		final Double minimumTaskWorkload;
 		final Double maximumTaskWorkload;
-		final Double ratioOfPublicTasks;
-		final Double ratioOfPrivateTasks;
-		final Double ratioOfFinishedTasks;
-		final Double ratioOfUnfinishedTasks;
+		final Integer numberOfPublicTasks;
+		final Integer numberOfPrivateTasks;
+		final Integer numberOfFinishedTasks;
+		final Integer numberOfUnfinishedTasks;
 
 		averageTaskExecutionPeriod = this.repository.averageTaskExecutionPeriod();
 		deviationTaskExecutionPeriod = this.repository.deviationTaskExecutionPeriod();
@@ -80,10 +80,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		deviationTaskWorkload = this.repository.deviationTaskWorkload();
 		minimumTaskWorkload = this.repository.minimumTaskWorkload();
 		maximumTaskWorkload = this.repository.maximumTaskWorkload();
-		ratioOfPublicTasks = this.repository.ratioOfPublicTasks();
-		ratioOfPrivateTasks = this.repository.ratioOfPrivateTasks();
-		ratioOfFinishedTasks = this.repository.ratioOfFinishedTasks();
-		ratioOfUnfinishedTasks = this.repository.ratioOfUnfinishedTasks();
+		numberOfPublicTasks = this.repository.numberOfPublicTasks();
+		numberOfPrivateTasks = this.repository.numberOfPrivateTasks();
+		numberOfFinishedTasks = this.repository.numberOfFinishedTasks();
+		numberOfUnfinishedTasks = this.repository.numberOfUnfinishedTasks();
 
 		result = new Dashboard();
 		result.setAverageTaskExecutionPeriod(averageTaskExecutionPeriod);
@@ -94,10 +94,10 @@ public class AdministratorDashboardShowService implements AbstractShowService<Ad
 		result.setDeviationTaskWorkload(deviationTaskWorkload);
 		result.setMinimumTaskWorkload(minimumTaskWorkload);
 		result.setMaximumTaskWorkload(maximumTaskWorkload);
-		result.setRatioOfPublicTasks(ratioOfPublicTasks);
-		result.setRatioOfPrivateTasks(ratioOfPrivateTasks);
-		result.setRatioOfFinishedTasks(ratioOfFinishedTasks);
-		result.setRatioOfUnfinishedTasks(ratioOfUnfinishedTasks);
+		result.setNumberOfPublicTasks(numberOfPublicTasks);
+		result.setNumberOfPrivateTasks(numberOfPrivateTasks);
+		result.setNumberOfFinishedTasks(numberOfFinishedTasks);
+		result.setNumberOfUnfinishedTasks(numberOfUnfinishedTasks);
 
 		return result;
 	}

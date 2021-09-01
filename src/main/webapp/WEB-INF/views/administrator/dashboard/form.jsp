@@ -106,8 +106,8 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${ratioOfPublicTasks}"/>, 
-						<jstl:out value="${ratioOfPrivateTasks}"/>
+						<jstl:out value="${numberOfPublicTasks}"/>, 
+						<jstl:out value="${numberOfPrivateTasks}"/>
 					]
 				}
 			]
@@ -157,8 +157,8 @@
 			datasets : [
 				{
 					data : [
-						<jstl:out value="${ratioOfFinishedTasks}"/>, 
-						<jstl:out value="${ratioOfUnfinishedTasks}"/>,
+						<jstl:out value="${numberOfFinishedTasks}"/>, 
+						<jstl:out value="${numberOfUnfinishedTasks}"/>,
 					]
 				}
 			]

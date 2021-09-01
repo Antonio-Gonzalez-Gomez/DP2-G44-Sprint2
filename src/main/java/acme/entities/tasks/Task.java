@@ -7,6 +7,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
@@ -47,6 +48,7 @@ public class Task extends DomainEntity {
     protected Date endingDate;
     
     @NotNull
+    @Min(0)
     protected Double workload;
     
     @NotNull
@@ -60,7 +62,8 @@ public class Task extends DomainEntity {
  // Derived attributes -----------------------------------------------------
 
 
- 	public void setExecutionPeriod() {
+ 	@SuppressWarnings("deprecation")
+	public void setExecutionPeriod() {
 		this.executionPeriod = (double) ((this.endingDate.getYear()*525600-525600 + this.endingDate.getMonth()*43200 + 
 			this.endingDate.getDate()*1440-1440 + this.endingDate.getHours()*60 + this.endingDate.getMinutes() + 
 			this.endingDate.getSeconds()/60) - (this.startDate.getYear()*525600-525600 + 
