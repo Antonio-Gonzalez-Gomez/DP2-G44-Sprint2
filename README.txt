@@ -14,4 +14,4 @@ University of Sevilla.  This project helps them start working on their new infor
 projects.
 
 Repository: https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2
-Release: https://github.com/Antonio-Gonzalez-Gomez/DP2-G50-Sprint2/releases/tag/v1.1.0
+Release: https://github.com/Antonio-Gonzalez-Gomez/DP2-G44-Sprint2/releases/tag/v1.1.1
