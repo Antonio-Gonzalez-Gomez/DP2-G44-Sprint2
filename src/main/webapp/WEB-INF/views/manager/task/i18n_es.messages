@@ -44,3 +44,6 @@ manager.task.form.error.execution_period_null = Se ha producido un error al asig
 manager.task.form.error.title_spam = Contiene demasiadas palabras de spam
 manager.task.form.error.description_spam = Contiene demasiadas palabras de spam
 manager.task.form.error.big_workload = La carga de trabajo no puede ser 100.0 o mayor
+manager.task.form.error.negative = La carga de trabajo debe ser un valor positivo
+manager.task.form.error.incorrect_decimals = Los decimales deben ser 0, 1 o 2 (0.00)
+manager.task.form.error.over_60 = Los decimales no pueden superar el 60

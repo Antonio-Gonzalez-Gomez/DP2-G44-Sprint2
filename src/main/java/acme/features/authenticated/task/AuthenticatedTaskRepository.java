@@ -1,4 +1,4 @@
-package acme.feaures.authenticated.task;
+package acme.features.authenticated.task;
 
 import java.util.Collection;
 

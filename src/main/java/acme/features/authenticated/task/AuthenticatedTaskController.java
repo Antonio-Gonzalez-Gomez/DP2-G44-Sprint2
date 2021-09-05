@@ -1,4 +1,4 @@
-package acme.feaures.authenticated.task;
+package acme.features.authenticated.task;
 
 import javax.annotation.PostConstruct;
 
@@ -13,7 +13,7 @@ import acme.framework.entities.Authenticated;
 
 @Controller
 @RequestMapping("/authenticated/task/")
-public class AuthenticatedTaskConroller extends AbstractController<Authenticated, Task>{
+public class AuthenticatedTaskController extends AbstractController<Authenticated, Task>{
     // Internal state ---------------------------------------------------------
 
         @Autowired

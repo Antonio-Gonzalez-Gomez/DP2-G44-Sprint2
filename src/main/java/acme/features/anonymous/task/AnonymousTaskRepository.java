@@ -11,15 +11,10 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AnonymousTaskRepository extends AbstractRepository {
 
-    @Query("select t from Task t")
-    Collection<Task> findMany();
-    
     @Query("select t from Task t where t.privacy = false and t.finished = false")
     Collection<Task> findtaskspublinonfinished();
     
     @Query("select t from Task t where t.id = ?1")
     Task findOneTaskById(int id);
-    
-  
 
 }

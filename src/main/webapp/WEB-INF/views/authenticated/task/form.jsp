@@ -21,7 +21,7 @@
     <acme:form-url code="authenticated.task.form.label.link" path="link" readonly="true"/>
     <acme:form-moment code="authenticated.task.form.label.startDate" path="startDate" readonly="true"/>
     <acme:form-moment code="authenticated.task.form.label.endingDate" path="endingDate" readonly="true"/>
-    <acme:form-double code="authenticated.task.form.label.workload" path="workload" readonly="true"/>
+    <acme:form-double code="authenticated.task.form.label.workload" path="fakeWorkload" readonly="true"/>
     
     <acme:form-return code="authenticated.task.form.button.return"/>    
 </acme:form>

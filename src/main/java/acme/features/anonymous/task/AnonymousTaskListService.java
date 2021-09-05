@@ -35,7 +35,7 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
             assert entity != null;
             assert model != null;
             
-            request.unbind(entity, model,"id", "title", "description", "link", "startDate","endingDate", "workload", "finished", "privacy");
+            request.unbind(entity, model,"id", "title", "description", "link", "startDate","endingDate", "workload", "fakeWorkload", "finished", "privacy");
        
         }
 
@@ -50,14 +50,6 @@ public class AnonymousTaskListService implements AbstractListService<Anonymous, 
             return result;
         }
         
-        
-        public boolean isntfinished(final Task task) {
-            if(task.getFinished()) {
-                return false;
-            }else {
-                return true;
-            }
-        }
         
     
 }

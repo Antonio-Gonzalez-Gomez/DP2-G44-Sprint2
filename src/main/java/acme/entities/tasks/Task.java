@@ -3,7 +3,9 @@ package acme.entities.tasks;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
@@ -23,6 +25,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes= {@Index(columnList="executionPeriod, workload, privacy, finished, manager_id")})
 public class Task extends DomainEntity {
 
     protected static final long    serialVersionUID    = 1L;
@@ -47,9 +50,11 @@ public class Task extends DomainEntity {
     @Temporal(TemporalType.TIMESTAMP)
     protected Date endingDate;
     
-    @NotNull
     @Min(0)
     protected Double workload;
+    
+    @NotNull
+    protected Double fakeWorkload;
     
     @NotNull
     protected Boolean privacy;
@@ -64,11 +69,11 @@ public class Task extends DomainEntity {
 
  	@SuppressWarnings("deprecation")
 	public void setExecutionPeriod() {
-		this.executionPeriod = (double) ((this.endingDate.getYear()*525600-525600 + this.endingDate.getMonth()*43200 + 
-			this.endingDate.getDate()*1440-1440 + this.endingDate.getHours()*60 + this.endingDate.getMinutes() + 
-			this.endingDate.getSeconds()/60) - (this.startDate.getYear()*525600-525600 + 
-			this.startDate.getMonth()*43200 + this.startDate.getDate()*1440-1440 + 
-			this.startDate.getHours()*60 + this.startDate.getMinutes() + this.startDate.getSeconds()/60));
+		this.executionPeriod = (this.endingDate.getYear()*8760-8760 + this.endingDate.getMonth()*720 + 
+			this.endingDate.getDate()*24-24 + this.endingDate.getHours() + this.endingDate.getMinutes()/60. + 
+			this.endingDate.getSeconds()/3600.) - (this.startDate.getYear()*8760-8760 + 
+			this.startDate.getMonth()*720 + this.startDate.getDate()*24-24 + 
+			this.startDate.getHours() + this.startDate.getMinutes()/60. + this.startDate.getSeconds()/3600.);
  	}
     
  // Relationships ----------------------------------------------------------

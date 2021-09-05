@@ -1,4 +1,4 @@
-package acme.feaures.authenticated.task;
+package acme.features.authenticated.task;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,7 +37,7 @@ public class AuthenticatedTaskShowService implements AbstractShowService<Authent
             assert entity != null;
             assert model != null;
 
-            request.unbind(entity, model, "title", "description", "link","startDate","endingDate", "workload", "finished", "privacy");
+            request.unbind(entity, model, "title", "description", "link","startDate","endingDate", "workload", "fakeWorkload", "finished", "privacy");
         }
         @Override
         public Task findOne(final Request<Task> request) {

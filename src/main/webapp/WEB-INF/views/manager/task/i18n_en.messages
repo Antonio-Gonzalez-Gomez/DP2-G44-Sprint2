@@ -38,9 +38,12 @@ manager.task.form.button.create = Create
 manager.task.form.button.return = Return
 
 manager.task.form.error.past_task = The start date must be for the future or the task must be finished
-manager.task.form.error.incorrect_finish = The ending date must be for the future
+manager.task.form.error.incorrect_finish = The ending date must be after the start date
 manager.task.form.error.work_overload = Workload is greater than time between the two dates
 manager.task.form.error.execution_period_null = An error has occurred during the execution period establishment 
 manager.task.form.error.title_spam = Contains too many spam words
 manager.task.form.error.description_spam = Contains too many spam words
 manager.task.form.error.big_workload = Workload cant go over 100.0
+manager.task.form.error.negative = Workload must be positive
+manager.task.form.error.incorrect_decimals = There must be only 0, 1 or 2 decimals (0.00)
+manager.task.form.error.over_60 = Decimals can not go over 60

@@ -11,7 +11,7 @@
 	<acme:form-url code="manager.task.form.label.link" path="link"/>
 	<acme:form-moment code="manager.task.form.label.startDate" path="startDate"/>
 	<acme:form-moment code="manager.task.form.label.endingDate" path="endingDate"/>
-	<acme:form-double code="manager.task.form.label.workload" path="workload"/>
+	<acme:form-double code="manager.task.form.label.workload" path="fakeWorkload"/>
 	<acme:form-checkbox code="manager.task.form.label.finished" path="finished"/>
 	<acme:form-checkbox code="manager.task.form.label.privacy" path="privacy"/>
 			

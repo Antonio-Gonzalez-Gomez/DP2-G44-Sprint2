@@ -1,4 +1,4 @@
-package acme.feaures.authenticated.task;
+package acme.features.authenticated.task;
 
 import java.util.Collection;
 
@@ -35,7 +35,7 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
             assert entity != null;
             assert model != null;
             
-            request.unbind(entity, model,"id", "title", "description", "link", "startDate","endingDate", "workload", "finished", "privacy");
+            request.unbind(entity, model,"id", "title", "description", "link", "startDate","endingDate", "workload", "fakeWorkload", "finished", "privacy");
        
         }
 
@@ -52,7 +52,8 @@ public class AuthenticatedTaskListService implements AbstractListService<Authent
         
         
         public boolean isntfinished(final Task task) {
-            if(task.getFinished()) {
+        	final boolean finish = task.getFinished();
+            if(finish) {
                 return false;
             }else {
                 return true;

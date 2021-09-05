@@ -43,21 +43,12 @@ public class ManagerTaskDeleteService implements AbstractDeleteService<Manager, 
 
 		@Override
 		public void bind(final Request<Task> request, final Task entity, final Errors errors) {
-			assert request != null;
-			assert entity != null;
-			assert errors != null;
-
-			request.bind(entity, errors);
+			//No es necesario
 		}
 
 		@Override
 		public void unbind(final Request<Task> request, final Task entity, final Model model) {
-			assert request != null;
-			assert entity != null;
-			assert model != null;
-
-			request.unbind(entity, model, "title", "description", "link", "startDate");
-			request.unbind(entity, model, "endingDate", "workload", "finished", "privacy");
+			//No es necesario
 		}
 
 		@Override
