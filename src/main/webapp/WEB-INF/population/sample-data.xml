@@ -80,7 +80,7 @@
 	<bean id="shout09" class="acme.entities.shouts.Shout">
 		<property name="author" value="Luke Skywalker"/>
 		<property name="text" value="May the 4th be with you"/>
-		<property name="moment" value="2021/05/04 12:30"/>
+		<property name="moment" value="2021/08/28 12:30"/>
 		<property name="info" value="http://www.sample-app.com"/>
 	</bean>
 	
@@ -247,6 +247,20 @@
 		<property name="finished" value="true"/>
 		<property name="privacy" value="false"/>
 		<property name="executionPeriod" value="3200"/>
+		<property name="manager" ref="manager2Manager"/>
+	</bean>
+	
+	<bean name="task7" class="acme.entities.tasks.Task">
+		
+		<property name="title" value="Crear tests"/>
+		<property name="description" value="Creación de tests para las funcionalidades implementadas"/>
+		<property name="link" value="https://github.com/vicsorvaz/DP2-G50-Sprint3/issues/6"/>
+		<property name="startDate" value="2021/04/03 10:00"/>
+		<property name="endingDate" value="2021/04/06 12:00"/>
+		<property name="workload" value="9.0"/>
+		<property name="finished" value="false"/>
+		<property name="privacy" value="false"/>
+		<property name="executionPeriod" value="74"/>
 		<property name="manager" ref="manager2Manager"/>
 	</bean>
 	
